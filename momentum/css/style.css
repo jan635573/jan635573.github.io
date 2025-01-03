@@ -1,0 +1,383 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --KRfont-style: "Noto Sans KR", serif;
+  --bg-white: #fff;
+  --bg-black: #222;
+  --color-theme3: #244455;
+  --color-theme4: #6AB2D8;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  color: var(--bg-black);
+}
+.logout_alert{
+  width: 500px;
+  height: 300px;
+  background-color: rgba(255,255,255,0.7);
+  border: 2px solid #222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  text-align: center;
+  color: #222;
+  font-family: var(--KRfont-style);
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.logout_alert > .alerttxt-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.outbtn-wrap{
+  margin-top: 15px;
+}
+.logout_alert button{
+  outline: none;
+  border: none;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/*** 테마 변경 ***/
+
+/**dark 모드 **/
+body.dark{
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+}
+body.dark .login,
+body.dark .logout{
+  background-color: var(--bg-white);
+  color: var(--bg-black);
+}
+body.dark .line{
+  background-color: var(--bg-white);
+}
+body.dark #loginForm > input,
+body.dark .del-btn
+{
+  color: var(--bg-white);
+}
+body.dark .list-wrap{
+  background-color: var(--bg-black);
+  border: 2px solid var(--bg-white);
+}
+body.dark .list-wrap input[type="text"]{
+  border: 2px solid var(--bg-white);
+}
+body.dark input[type="checkbox"]{
+  accent-color: #fff;
+}
+
+/** 테마3 **/
+body.theme3{
+  background-image: url(../images/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--bg-white);
+}
+body.theme3 .logout_alert{
+  border: 2px solid var(--color-theme3);
+  color: var(--color-theme3);
+}
+body.theme3 .logout_alert button{
+  background-color: var(--color-theme3);
+}
+body.theme3 .login,
+body.theme3 .logout{
+  background-color: var(--bg-white);
+  color: var(--color-theme3);
+}
+body.theme3 .line{
+  background-color: var(--bg-white);
+}
+body.theme3 #loginForm > input{
+  color: var(--bg-white);
+}
+body.theme3 #loginForm > input::placeholder{
+  color: rgba(255, 255, 255, 0.8);
+}
+body.theme3 .section3 ul,
+body.theme3 .del-btn
+{
+  color: var(--color-theme3);
+}
+body.theme3 .list-wrap{
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid var(--bg-white);
+}
+body.theme3 .list-wrap input[type="text"]{
+  border: 2px solid var(--bg-white);
+}
+body.theme3 input[type="checkbox"]{
+  accent-color: var(--color-theme3);
+}
+
+/** 테마4 **/
+body.theme4{
+  background-image: url(../images/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--bg-white);
+}
+body.theme4 .logout_alert{
+  border: 2px solid var(--color-theme4);
+  color: var(--color-theme4);
+}
+body.theme4 .logout_alert button{
+  background-color: var(--color-theme4);
+}
+body.theme4 .section1{
+  color: var(--color-theme4);
+}
+body.theme4 .login,
+body.theme4 .logout{
+  background-color: var(--bg-white);
+  color: var(--color-theme4);
+}
+body.theme4 .line{
+  background-color: var(--bg-white);
+}
+body.theme4 #loginForm > input::placeholder{
+  color: rgba(255, 255, 255, 0.8);
+}
+body.theme4 #loginForm > input,
+body.theme4 .section3 ul,
+body.theme4 .del-btn
+{
+  color: var(--bg-white);
+}
+body.theme4 .list-wrap{
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--bg-white);
+}
+body.theme4 .list-wrap input[type="text"]{
+  border: 2px solid var(--bg-white);
+}
+body.theme4 input[type="checkbox"]{
+  accent-color: var(--bg-white);
+}
+
+/*** theme_change ***/
+.theme_change{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+.theme_change > p{
+  text-align: end;
+  line-height: 15px;
+  font-weight: 500;
+}
+.theme_change > span{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #222;
+  cursor: pointer;
+}
+.theme_change > span:nth-of-type(2){
+  background-color: #222;
+  border-color: #fff;
+}
+.theme_change > span:nth-of-type(3){
+  background-color: #244455;
+  border-color: #fff;
+}
+.theme_change > span:nth-of-type(4){
+  background-color: #6AB2D8;
+  border-color: #fff;
+}
+.theme_change > span:hover{
+  opacity: 0.7;
+}
+
+/*** section1 ***/
+.section1{
+  margin: 50px auto;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+.date-weather{
+  margin: 0 auto;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock{
+  display: inline-block;
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 7rem;
+}
+
+/*** section2 ***/
+.hidden{
+  display: none;
+}
+.section2{
+  margin: 30px auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.login-name > p{
+  font-family: "Poppins", "Noto Sans KR", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 460px;
+  height: 50px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.logout{
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  transform: rotate(180deg);
+}
+#loginForm, .login-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginForm > input{
+  width: 460px;
+  height: 50px;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  background: none;
+}
+.line{
+  margin: 0 auto;
+  width: 500px;
+  height: 3px;
+  background-color: var(--bg-black);
+}
+.login{
+  background-color: var(--bg-black);
+  color: var(--bg-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+}
+.quote{
+  width: 500px;
+  margin: 0 auto;
+  text-align: right;
+  font-family: var(--KRfont-style);
+}
+
+/*** section3 ***/
+.del-btn{
+  color: var(--bg-black);
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.section3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.section3 h3{
+  font-size: 2rem;
+}
+.list-wrap{
+  background-color: var(--bg-white);
+  border: 2px solid var(--bg-black);
+  border-radius: 10px;
+  width: 500px;
+  height: 470px;
+  padding: 20px;
+  white-space: wrap;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
+  overflow-y: auto;
+}
+.list-wrap input[type="text"]{
+  width: 95%;
+  height: 40px;
+  border: 2px solid var(--bg-black);
+  border-radius: 50px;
+  padding-left: 15px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.section3 ul{
+  font-family: var(--KRfont-style);
+  margin-left: 40px;
+  font-size: 1.5rem;
+}
+.todolist > .list-wrap > ul {
+  margin-left: 10px;
+}
+.todolist > .list-wrap > ul > li{
+  list-style: none;
+}
+.todolist > .list-wrap > ul > li > input:checked + label{
+  text-decoration: line-through;
+}
+.todolist > .list-wrap > ul > li > label{
+  margin-left: 15px;
+}
+input[type="checkbox"]{
+  accent-color: #222;
+}

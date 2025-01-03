@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>momentum 사이트 개인 작업_정의담</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="logout_alert">
+      <div class="alerttxt-wrap">
+        <p>로그아웃 시 입력한 모든 내용이 삭제됩니다.</p>
+        <p>정말 로그아웃하시겠습니까?</p>
+        <div class="outbtn-wrap">
+          <button class="logout_yes">YES</button>
+          <button class="logout_no">NO</button>
+        </div>
+      </div>
+    </div>
+    <section class="section1">
+      <div class="date-weather">
+        <span class="date"></span>
+        <span class="weather"></span>
+      </div>
+      <h1 class="clock">00:00:00</h1>
+      <div class="theme_change">
+        <p>THEME<br />CHANGE</p>
+        <span class="theme1"></span>
+        <span class="theme2"></span>
+        <span class="theme3"></span>
+        <span class="theme4"></span>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="login-name">
+        <button class="logout hidden">&#10140;</button>
+        <p class="hidden">Hello.</p>
+      </div>
+      <form id="loginForm" class="hidden">
+        <input
+          type="text"
+          placeholder="What is your name?"
+          required
+          autofocus
+        />
+        <button class="login">&#10140;</button>
+      </form>
+      <div class="line"></div>
+      <p class="quote">
+        <span>명언</span>
+        <span>지은이</span>
+      </p>
+    </section>
+    <section class="section3">
+      <div class="weekly-goal">
+        <h3>WEEKLY GOAL</h3>
+        <div class="list-wrap">
+          <form id="weeklyForm">
+            <input type="text" placeholder="주간 목표를 입력하세요." required />
+          </form>
+          <ul id="weeklyList"></ul>
+        </div>
+      </div>
+      <div class="todolist">
+        <h3>TO DO LIST</h3>
+        <div class="list-wrap">
+          <form id="todoForm">
+            <input type="text" placeholder="할 일을 입력하세요." required />
+          </form>
+          <ul id="todoList"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="./script/login.js"></script>
+    <script src="./script/date.js"></script>
+    <script src="./script/weather.js"></script>
+    <script src="./script/clock.js"></script>
+    <script src="./script/quotes.js"></script>
+    <script src="./script/weeklygoal.js"></script>
+    <script src="./script/todo.js"></script>
+    <script src="./script/theme.js"></script>
+  </body>
+</html>
