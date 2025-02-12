@@ -164,7 +164,7 @@ nav > .icon{
 }
 nav > .filter{
   width: 80px;
-  margin-left: auto;
+  margin-left: 10rem;
   text-align: center;
   padding: 7px;
   border: 1px solid #ccc;
