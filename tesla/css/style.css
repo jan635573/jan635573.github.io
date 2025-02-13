@@ -35,7 +35,7 @@ header > nav > div.icons > a{
 }
 header > nav{
   width: 90%;
-  min-width: 800px;
+/*   min-width: 800px; */
   height: 100px;
   margin: 0 auto;
   display: flex;
