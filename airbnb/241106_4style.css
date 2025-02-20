@@ -191,30 +191,30 @@ main .card > .card-img{
   flex-direction: column;
   justify-content: space-between;
   border-radius: 7px;
-  background-image: url(./images/airbnb/card_img.jpg);
+  background-image: url(./images/airbnb/card_img1.jpg);
   background-position: center;
   background-size: cover;
 }
 main .card:nth-child(2) > .card-img{
-  background-image: url(./images/9.jpg);
+  background-image: url(./images/airbnb/card_img2.jpg);
 }
 main .card:nth-child(3) > .card-img{
-  background-image: url(./images/8.jpg);
+  background-image: url(./images/airbnb/card_img3.jpg);
 }
 main .card:nth-child(4) > .card-img{
-  background-image: url(./images/5.jpg);
+  background-image: url(./images/airbnb/card_img4.jpg);
 }
 main .card:nth-child(5) > .card-img{
-  background-image: url(./images/6.jpg);
+  background-image: url(./images/airbnb/card_img5.jpg);
 }
 main .card:nth-child(6) > .card-img{
-  background-image: url(./images/3-2.jpg);
+  background-image: url(./images/airbnb/card_img6.jpg);
 }
 main .card:nth-child(7) > .card-img{
-  background-image: url(./images/4.jpg);
+  background-image: url(./images/airbnb/card_img7.jpg);
 }
 main .card:nth-child(8) > .card-img{
-  background-image: url(./images/2.jpg);
+  background-image: url(./images/airbnb/card_img8.jpg);
 }
 main .card > .card-img > .card-title,
 main .card > .card-img > .card-btn
@@ -272,7 +272,7 @@ main .card > .card-txt > .card-txt1{
   justify-content: space-between;
   font-weight: bolder;
 }
-main .card > .card-txt > p:nth-of-type(4){
+main .card > .card-txt > p:last-of-type{
   font-weight: bolder;
 }
 /*** footer ***/
